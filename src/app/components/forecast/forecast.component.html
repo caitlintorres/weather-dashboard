@@ -1,0 +1,12 @@
+<article class="card">
+  <h3>5-Day Forecast</h3>
+  <div class="list" *ngIf="items?.length; else empty">
+    <div class="item" *ngFor="let it of items">
+      <div class="date">{{ d(it.dt) }}</div>
+      <img [src]="'https://openweathermap.org/img/wn/' + it.icon + '.png'" [alt]="it.description" />
+      <div class="temp">{{ it.temp | number:'1.0-0' }}{{ tempUnit }}</div>
+      <div class="desc">{{ it.description | titlecase }}</div>
+    </div>
+  </div>
+  <ng-template #empty>Forecast unavailable.</ng-template>
+</article>

@@ -1,0 +1,6 @@
+.container { max-width: 880px; margin: 2rem auto; padding: 0 1rem; }
+header { display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; }
+.grid { display:grid; grid-template-columns: 1fr; gap:1rem; }
+.status { margin: 1rem 0; }
+.status.error { color: #c62828; }
+@media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }

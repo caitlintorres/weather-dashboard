@@ -1,0 +1,13 @@
+<article class="card" *ngIf="data">
+  <header>
+    <h2>{{ data.name }}, {{ data.country }}</h2>
+    <img [src]="'https://openweathermap.org/img/wn/' + data.icon + '@2x.png'" [alt]="data.description" />
+  </header>
+  <div class="temp">{{ data.temp | number:'1.0-0' }}{{ tempUnit }}</div>
+  <div class="desc">{{ data.description | titlecase }}</div>
+  <ul class="meta">
+    <li>Feels like: {{ data.feelsLike | number:'1.0-0' }}{{ tempUnit }}</li>
+    <li>Humidity: {{ data.humidity }}%</li>
+    <li>Wind: {{ data.wind }} {{ windUnit }}</li>
+  </ul>
+</article>

@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="search()" class="search">
+  <input type="text" placeholder="Search city (e.g. London)" formControlName="city" />
+  <button type="submit" [disabled]="form.invalid">Search</button>
+</form>
+
+<div class="recent" *ngIf="recent.length">
+  <span>Recent:</span>
+  <button *ngFor="let c of recent" (click)="selectCity(c)">{{ c }}</button>
+</div>
