@@ -19,7 +19,7 @@ weather and a 5-day forecast from OpenWeatherMap.
 ### 1. Clone repo & install dependencies
 
 ``` bash
-git clone https://github.com/yourusername/weather-dashboard.git
+git clone https://github.com/caitlintorres/weather-dashboard.git
 cd weather-dashboard
 npm install
 ```
